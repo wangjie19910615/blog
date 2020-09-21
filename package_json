@@ -1,0 +1,31 @@
+
+babal-polyfill: babel默认只转换新的js语法，而不转换新的API，比如ES6的对象，数组操作指令，或者一些全局对象上的方法（Object.assign）等。
+babel-plugin-import： 按需引入组件
+babel-eslint： 代码检测工具
+babel-plugin-dev-expression： 检测测试环境不会运行
+babel-plugin-dva-hmr： 开发环境热加载
+babel-plugin-transform-runtime：  在ES6转换成ES5的语法时，babel会使用到一些辅助函数，比如_extend。babel默认会将这些辅助函数内联到每一个js文件钟，这样文件多的时候，项目会变得很大，
+	transform-runtime可以把这些辅助函数搬到一个单独的模块babel-runtime中，这样做可以减少项目文件的大小。
+clipboard： 复制粘贴文本和事件
+draft-js： 富文本编辑器
+crypto-js ：前端加密
+classNames ：拼接对象、数组和字符串
+cross-env： 解析跨平台环境变量的语法命令（NODE_ENV=production像这样设置环境变量时，大多数Windows命令提示符都会阻塞）
+html-loader：将HMTL模板文件当做一个string输出。
+ejs-loader：将EJS模板文件当做一个函数输出（将模板字符串和一些数据作为参数传递给 EJS，生成一个html文件）
+dependencies和devDependencies的区别 ？
+	我们下载的这些包（插件），有的是开发过程中使用的，比如gulp,webpack去打包压缩一些工具；
+	而有的插件则是项目能完整运行所依赖的，比如我们常用的 jquery;
+	对于 gulp,webpack 之类的一些工具，我们在代码提交上线的时候，客户是用不到的，所以没有必要提交上线，所以我们把它们放入 devDependencies中
+	而jquery插件，如果不提交上下，项目运行的时候就会报错，所以我们就把它放入 dependencies中。
+html-webpack-plugin 可以根据你设置的模板，在每次运行后生成的对应的模板文件，同时所依赖的CSS/JS也都会被引入，如果CSS/JS中含有hash值，则html-webpack-plugin生成的模板文件也会正确版本的CSS/JS文件。
+husky ：为 git commit 增加钩子
+prettier： 保证每个团队代码格式一致性
+redbox-react ： 为了更友好的显示js错误
+roadhog： 是一个cli工具，提供三个命令：
+	server
+	build
+	test
+	分别用于本地调试和构建，并且好用的mock功能。命令行体验和create-react-app一致，配置略有不同，比如默认开启css modules，还提供JSON格式的配置方式。
+thread-loader：多线程打包
+webpack-bundle-analyzer：打包文件分析工具
